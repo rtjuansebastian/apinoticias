@@ -2,6 +2,7 @@ class User < ApplicationRecord
 
 	has_secure_password
 	before_save :downcase_email
+	has_many :articulos
 
 	validacion_email = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
 
